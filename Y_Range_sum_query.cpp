@@ -31,7 +31,17 @@ int main()
         int ini, fi;
         cin >> ini >> fi;
         ini--;fi--;
-        cout<<vsum[fi]-vsum[ini]<<endl;
+        if (ini==0)
+        {
+            cout<<vsum[fi]<<endl;
+            
+        }
+        else
+        {
+            cout<<vsum[fi]-vsum[ini-1]<<endl;
+        }
+        
+        
     }
 
     return 0;
