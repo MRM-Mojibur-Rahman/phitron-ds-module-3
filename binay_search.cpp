@@ -1,33 +1,46 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
-int main ()
+int main()
 {
-   int n,val;
-   cin>>n>>val;
-   vector<int>v;
-   for(int i = 0; i <n;i++)cin>>v[i];
-   int r=0,l=n-1,f=0;
-   while (r<=l)
-   {
-        int mild = (r+l)/2;
-        if (v[mild]==val)
+    int n, test_case;
+    cin >> n >> test_case;
+    vector<int> v(n);
+
+    for (int i = 0; i < n; i++)
+        cin >> v[i];
+
+    sort(v.begin(), v.end());
+
+    int val;
+    cin >> val;
+    int r = 0, l = n - 1;
+    int f = 0;
+    while (r <= l)
+    {
+
+        int mild = (r + l) / 2;
+        if (val == v[mild])
         {
-            f=1;
+            f = 1;
             break;
         }
-        else if(v[mild]<val)
+        else if (v[mild] > val)
         {
-            l=mild-1;
+            l = mild - 1;
         }
         else
         {
-            /* code */
+            r = mild + 1;
         }
-        
-        
-        
-   }
-   
+    }
+    if (f == 1)
+    {
+        cout << "found" << endl;
+    }
+    else
+    {
+        cout << "not found" << endl;
+    }
 
     return 0;
 }

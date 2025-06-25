@@ -1,0 +1,1 @@
+{"name":"Local: binay_search","url":"c:\\programming\\data structure\\m-3\\binay_search.cpp","tests":[{"id":1750679396975,"input":"5 3\n1 5 4 3 2\n5","output":"found"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\programming\\data structure\\m-3\\binay_search.cpp","group":"local","local":true}
